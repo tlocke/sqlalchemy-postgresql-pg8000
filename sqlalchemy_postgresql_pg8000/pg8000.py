@@ -19,17 +19,9 @@ configured in the postgresql.conf file in order to use encodings
 other than ascii. Set this value to the same value as the
 "encoding" parameter on create_engine(), usually "utf-8".
 
-Interval
---------
-
-Passing data from/to the Interval type is not supported as of
-yet.
-
 """
-from ... import util, exc
 import decimal
-from ... import processors
-from ... import types as sqltypes
+from sqlalchemy import exc, util, processors, types as sqltypes
 from .base import PGDialect, \
                 PGCompiler, PGIdentifierPreparer, PGExecutionContext,\
                 _DECIMAL_TYPES, _FLOAT_TYPES, _INT_TYPES
@@ -122,5 +114,3 @@ class PGDialect_pg8000(PGDialect):
 
     def is_disconnect(self, e, connection, cursor):
         return "connection is closed" in str(e)
-
-dialect = PGDialect_pg8000

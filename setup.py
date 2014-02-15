@@ -1,4 +1,4 @@
-mport os
+import os
 import re
 
 from setuptools import setup
@@ -36,7 +36,7 @@ setup(
     zip_safe=False,
     entry_points={
         'sqlalchemy.dialects': [
-            'access = '
-            'sqlalchemy_postgresql_pg8000.pg8000:PostgreSQLDialect_pg8000',
-            'access.pg8000 = '
-            'sqlalchemy_postgresql_pg8000.pg8000:PostgreSQLDialect_pg8000',]})
+            'postgresql = '
+            'sqlalchemy_postgresql_pg8000.pg8000:PGDialect_pg8000',
+            'postgresql.pg8000 = '
+            'sqlalchemy_postgresql_pg8000.pg8000:PGDialect_pg8000',]})
