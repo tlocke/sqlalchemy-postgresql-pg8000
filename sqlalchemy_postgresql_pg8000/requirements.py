@@ -1,11 +1,8 @@
 from sqlalchemy.testing.requirements import SuiteRequirements
 from sqlalchemy.testing import exclusions
 
-class Requirements(SuiteRequirements):
 
-    @property
-    def reflects_pk_names(self):
-        return exclusions.open()
+class Requirements(SuiteRequirements):
 
     @property
     def reflects_pk_names(self):

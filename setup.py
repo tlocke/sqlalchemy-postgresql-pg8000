@@ -28,6 +28,7 @@ setup(
     keywords='SQLAlchemy PostgreSQL pg8000',
     author='Tony Locke',
     author_email='tlocke@tlocke.org.uk',
+    url="https://github.com/tlocke/sqlalchemy-postgresql-pg8000",
     license='MIT',
     packages=['sqlalchemy_postgresql_pg8000'],
     include_package_data=True,
